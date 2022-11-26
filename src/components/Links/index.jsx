@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from './Links.module.css';
+import styles from 'src/components/Links/Links.module.css';
 
 const ITEMS = [
   {

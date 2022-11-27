@@ -1,7 +1,7 @@
 import styles from 'src/components/Headline/Headline.module.css'
 
 export function Headline(props) {
-  console.log(props.title);
+  // console.log(props.title);
 
   return (
     <div>

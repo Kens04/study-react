@@ -2,10 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from 'src/components/Links/Links.module.css';
 
-export function Links({ items }) {
+export const Links = (props) => {
   return (
       <div className={styles.grid}>
-        {items.map((item) => {
+        {props.items.map((item) => {
           return (
             <a key={item.href} href={item.href} className={styles.card}>
             <h2>{item.title}</h2>

@@ -6,7 +6,6 @@ import { Header } from "src/components/Header";
 
 
 export default function Home(props) {
-  console.log(props);
   const {
     count,
     isShow,

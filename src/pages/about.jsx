@@ -3,14 +3,18 @@ import { Footer } from '../components/Footer'
 import styles from '../styles/Home.module.css'
 import { Main } from '../components/Main';
 import { Header } from '../components/Header';
-import { useCounter } from "src/hooks/useCounter";
-import { useInputArray } from "src/hooks/useInputArray";
-import { useBgLightBlue } from "src/hooks/useBgLightBlue";
 
-export default function About() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightBlue();
+export default function About(props) {
+  const {
+    count,
+    isShow,
+    handleClick,
+    handleDisplay,
+    text,
+    array,
+    handleChange,
+    handleAdd,
+  } = props;
 
   return (
     <div className={styles.container}>
@@ -26,7 +30,7 @@ export default function About() {
       <input type="text" value={text} onChange={handleChange}/>
       <button onClick={handleAdd}>追加</button>
       <ul>
-        {array.map(item => {
+        {array?.map(item => {
           return (
             <li key={item}>{item}</li>
           )

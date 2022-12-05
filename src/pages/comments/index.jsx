@@ -14,7 +14,8 @@ export const getStaticProps = async () => {
       fallback: {
         [COMMENTS_API_URL]: commentsData,
       },
-    }
+    },
+    revalidate: 1,
   };
 };
 

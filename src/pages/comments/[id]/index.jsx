@@ -25,6 +25,7 @@ export const getStaticProps = async (ctx) => {
   if (!comment.ok) {
     return {
       notFound: true,
+      revalidate: 1,
     };
   }
 
@@ -35,7 +36,8 @@ export const getStaticProps = async (ctx) => {
       fallback: {
         [COMMENT_API_URL]: commentsData,
       },
-    }
+    },
+    revalidate: 1,
   };
 };
 

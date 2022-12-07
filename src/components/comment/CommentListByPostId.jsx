@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { useCommentsByPostId } from "src/hooks/useFetchArray";
+import { useFetchArray } from "src/hooks/useFetchArray";
+import { API_URL } from "src/utils/const";
 
-export const CommentsByPostId = (props) => {
+export const CommentListByPostId = (props) => {
   const {
     data,
     error,
     isLoading,
     isEmpty,
-  } = useCommentsByPostId(props.id);
+  } = useFetchArray(props.id ? `${API_URL}/posts/${props.id}/comments` : null);
 
   if (isLoading) {
     return <p>Loading...</p>;

@@ -1,13 +1,11 @@
 import Head from 'next/head'
-import { Header } from "src/components/Header";
-import { Post } from 'src/components/Post';
+import { PostDetail } from 'src/components/Post/PostDetail';
 
 const PostsId = () => {
 
   return (
     <div>
-      <Header />
-      <Post />
+      <PostDetail />
     </div>
   )
 }
